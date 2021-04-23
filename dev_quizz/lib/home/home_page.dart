@@ -37,14 +37,26 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               SizedBox(
-                height: 24,
+                height: 32,
+                child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    children: [
+                      LevelButtonWidget(label: 'Fácil'),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      LevelButtonWidget(label: 'Médio'),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      LevelButtonWidget(label: 'Difícil'),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      LevelButtonWidget(label: 'Perito'),
+                    ]),
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                LevelButtonWidget(label: 'Fácil'),
-                LevelButtonWidget(label: 'Médio'),
-                LevelButtonWidget(label: 'Difícil'),
-                LevelButtonWidget(label: 'Perito'),
-              ]),
               SizedBox(
                 height: 24,
               ),
@@ -55,9 +67,9 @@ class _HomePageState extends State<HomePage> {
                 children: controller.quizzes!
                     .map((e) => QuizCardWidget(
                           title: e.title,
-                          percent: e.questionsAwnsered / e.questions.length,
+                          percent: e.questionsAnswered / e.questions.length,
                           completed:
-                              "${e.questionsAwnsered}/${e.questions.length}",
+                              "${e.questionsAnswered}/${e.questions.length}",
                         ))
                     .toList(),
               ))

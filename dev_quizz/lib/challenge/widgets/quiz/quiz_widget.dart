@@ -11,15 +11,26 @@ class QuizWidget extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          Text(title, style: AppTextStyles.heading,),
-          SizedBox(height: 24,),
-          AwnserWidget(isRight: true, isSelected: true,title: "Possibilita a criação de aplicativos compilados nativamente"),
-          AwnserWidget(title: "Possibilita a criação de aplicativos compilados nativamente"),
-          AwnserWidget(title: "Possibilita a criação de aplicativos compilados nativamente")
+          Text(
+            title,
+            style: AppTextStyles.heading,
+          ),
+          SizedBox(
+            height: 24,
+          ),
+          AnswerWidget(
+              isRight: true,
+              isSelected: true,
+              title:
+                  "Possibilita a criação de aplicativos compilados nativamente"),
+          AnswerWidget(
+              title:
+                  "Possibilita a criação de aplicativos compilados nativamente"),
+          AnswerWidget(
+              title:
+                  "Possibilita a criação de aplicativos compilados nativamente")
         ],
       ),
     );
   }
-
-
 }
