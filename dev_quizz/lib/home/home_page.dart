@@ -45,15 +45,15 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       LevelButtonWidget(label: 'Fácil'),
                       SizedBox(
-                        width: 10,
+                        width: 5,
                       ),
                       LevelButtonWidget(label: 'Médio'),
                       SizedBox(
-                        width: 10,
+                        width: 5,
                       ),
                       LevelButtonWidget(label: 'Difícil'),
                       SizedBox(
-                        width: 10,
+                        width: 5,
                       ),
                       LevelButtonWidget(label: 'Perito'),
                     ]),
@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ChallengePage(questions: e.questions,)));
+                                    builder: (context) => ChallengePage(questions: e.questions, title: e.title,)));
                           },
                         ))
                     .toList(),
